@@ -25,4 +25,9 @@ public class ProductServiceImpl implements ProductService {
     public Product search(Integer id) {
         return null;
     }
+
+    @Override
+    public boolean delete(Integer id) {
+        return false;
+    }
 }
