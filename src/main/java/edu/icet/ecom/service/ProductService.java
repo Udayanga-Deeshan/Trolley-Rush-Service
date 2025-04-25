@@ -13,4 +13,6 @@ public interface ProductService {
     List<Product> getAll();
 
     Product search(Integer id);
+
+    boolean delete(Integer id);
 }
