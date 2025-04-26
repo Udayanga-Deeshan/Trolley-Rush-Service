@@ -1,5 +1,7 @@
 package edu.icet.ecom.entity;
 
+import edu.icet.ecom.util.ProductCategory;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -7,10 +9,16 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Entity
+@Table(name = "products")
 public class ProductEntity {
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     private  String name;
+
+    private ProductCategory category;
 
     private  String description;
 
